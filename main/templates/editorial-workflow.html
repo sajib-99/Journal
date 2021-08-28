@@ -1,0 +1,63 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+ 
+  <!-- Contact Us Part Start -->
+  <section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-bg">
+            <h6>Editorial Workflow</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+ <!-- Editorial Workflow Part Start -->
+  <section id="workflow">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="editorial-workflow">
+            <p><u>The following is the editorial workflow that every manuscript submitted to the journal undergoes during the course of the peer-review process.</u></p>
+            <div class="row">
+              <div class="col-lg-1 col-2 pr-0 text-center">
+                <img src="{% static 'images/arrow.png' %}" alt="image">
+              </div>
+              <div class="col-lg-11 col-10 pl-0">
+                <p>The entire editorial workflow is performed using the online Manuscript Tracking System. Once a manuscript is submitted for publication, the manuscript is checked by the journal’s editorial office to ensure that it is suitable to go through the normal peer review process. Once this is done, the manuscript is sent to a number of Editorial Board Members based on the subject of the manuscript, the availability of the Editors, and the lack of any potential conflicts of interest with the submitting authors. The manuscript may also be sent to a number of external peer reviewers to participate in the peer review process. The journal's editors will have around two weeks to provide either a recommendation for the publication of the manuscript, along with a written commentary detailing any changes that the authors can make to improve their manuscript before final publication, or a written critique of why the manuscript should not be published.</p>
+              </div>
+              <div class="col-lg-1 col-2 pr-0 text-center">
+                <img src="{% static 'images/arrow.png' %}" alt="image">
+              </div>
+              <div class="col-lg-11 col-10 pl-0">
+                <p>If the majority of the editorial evaluations that are received by the end of this first round of review recommend the manuscript be rejected, the manuscript will be rejected. If all the editorial evaluations that are received recommend that the manuscript be accepted for publication, the manuscript will be accepted. Otherwise, all the received editorial evaluations will be anonymously communicated to all of the Editors who participated in the first round of the review process. Each Editor will be given an additional week to review the feedback of the other Editors and to either confirm or revise their earlier editorial recommendations. If the majority of the editorial evaluations that are received by the end of this second round of review recommend the manuscript be accepted for publication, the manuscript will be accepted. Otherwise, the manuscript will be rejected.</p>
+              </div>
+              <div class="col-lg-1 col-2 pr-0 text-center">
+                <img src="{% static 'images/arrow.png' %}" alt="image"> 
+              </div>
+              <div class="col-lg-11 col-10 pl-0">
+                <p>The editorial model is designed to provide fast peer review for each manuscript while at the same time ensuring that only manuscripts that are both rigorous and provide a useful contribution to their field of research are accepted for publication.</p>
+              </div>
+              <div class="col-lg-1 col-2 pr-0 text-center">
+                <img src="{% static 'images/arrow.png' %}" alt="image">
+              </div>
+              <div class="col-lg-11 col-10 pl-0">
+                <p>Since the Editors have direct review responsibilities in this editorial workflow, the identities of the Editors participating in the peer review of a particular manuscript are not revealed during the course of the peer review process. If the manuscript is rejected, the identities of the Editors will remain confidential. If the manuscript is accepted for publication, the names of the Editors who recommended the publication of the manuscript will be published alongside the manuscript.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Editorial Workflow Part End -->
+
+
+{% endblock %}

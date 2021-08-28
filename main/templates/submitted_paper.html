@@ -1,0 +1,66 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Contact Us Part Start -->
+<section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-bg">
+            <h6>Submitted Papers</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Us Part End -->
+
+<section id="more">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="more-details">
+
+            {% for Submitted_Paper in items  %}
+
+            <div class="article-content">
+              <a href="review_paper/{{Submitted_Paper.paper_id}}"><h5>{{Submitted_Paper.Article_Title}}</h5></a>
+              <p><i class="fas fa-user"></i>{{Submitted_Paper.author}}</p>
+              
+              <div class="view">
+                <a href="review_paper/{{Submitted_Paper.paper_id}}"><i class="fas fa-eye"></i>Read More</a>
+              </div>
+            </div>
+            
+            {% endfor %}
+
+            
+            <nav aria-label="..." style="margin-top: 30px;">
+              <ul class="pagination" style="justify-content: center;">
+                <li class="page-item">
+                  {% if items.has_previous %}
+                  <a class="page-link" href="?page={{ items.previous_page_number }}" tabindex="-1" aria-disabled="true">Previous</a>
+                  {% endif %}
+                </li>
+                
+                <!-- <li class="page-item active"><a class="page-link" href="#">1</a></li> -->
+                
+                <li class="page-item">
+                  {% if items.has_next %}
+                  <a class="page-link" href="?page={{ items.next_page_number }}">Next</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- More Part End -->
+
+
+{% endblock %}

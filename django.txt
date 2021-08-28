@@ -1,0 +1,19 @@
+===================================================Install  Django Virtual ENV===================================================
+
+pip install virtualenvwrapper-win
+
+mkvirtualenv #anyname
+
+===================================================Intall  Django===================================================
+
+pip  install django
+
+===================================================Creat Django Main Projcet===================================================
+
+django-admin --version
+
+django-admin startproject  #projectname
+
+===================================================Run Project===================================================
+
+python manage.py runserver

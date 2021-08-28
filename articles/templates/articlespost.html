@@ -1,0 +1,97 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<!-- Article Details Part Start -->
+  <section id="article-details">
+    <div class="container">
+      <div class="row">
+
+
+
+        <div class="col-lg-9">
+          <div class="article-details">
+            <h6>Article</h6>
+            <div class="article-content">
+              <h5>{{post.title}}</h5>
+              <p><i class="fas fa-user"></i>{{post.author}}</p>
+              <span><strong style="color: #e58e26;">Published: </strong> {{post.timeStamp}} </span>
+
+            
+              <div class="view">
+                <a href="{{ post.manuscript.url }}" target="_blank"><i class="fas fa-file-pdf"></i>Pdf</a>
+              </div>
+            
+
+            </div>
+            <div class="abstract">
+              <!-- <h5>Abstract</h5> -->
+              <p>{{post.content | safe }}</p>
+            </div>
+
+            <!-- {% if user.is_superuser %}
+            <div>
+              <a class="btn btn-outline-success" href="#" role="button"> Review Article </a>
+            </div>
+            {% endif %} -->
+
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-3">
+          <div class="other-journal">
+            <h6>Our Other Journals</h6>
+            <div class="row">
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ad text-center">
+            <h6 style="margin-bottom: 0;">Ads Here</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Article Details Part End -->
+
+{% endblock %}

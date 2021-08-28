@@ -1,0 +1,106 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Contact Us Part Start -->
+ <section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="contact-bg">
+            <h6>Search Results</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+  <section id="more">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="more-details">
+
+    {% if allPosts|length < 1 %}
+        <h4>No search results found</h4><br>
+        <h5> Your search keyword <b style="color: #487eb0;">‘{{search}}’ </b> did not match any documents. </h5>
+    {% endif %}
+
+          {% for post in allPosts  %}
+
+            <h6>Article</h6>
+            <span class="open-access">Open Access</span>
+            <div class="article-content">
+              <a href="/articles/{{post.slug}}"><h5>{{post.title}}</h5></a>
+              <a href="/articles/{{post.slug}}" style="color: black;">
+                <p>{{post.content| truncatechars:200 | safe}}</p>
+              </a>
+              <p><i class="fas fa-user"></i>{{post.author}}</p>
+              <span><strong style="color: #e58e26;">First Published:</strong> {{post.timeStamp}}</span>
+              <div class="view">
+                <a href="/articles/{{post.slug}}"><i class="fas fa-eye"></i>Read More..</a>
+                
+              </div>
+            </div>
+            
+          {% endfor %}    
+
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="other-journal">
+            <h6>Our Other Journals</h6>
+            <div class="row">
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ad text-center">
+            <h6 style="margin-bottom: 0;">Ads Here</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- More Part End --> 
+
+         
+
+
+{% endblock %}

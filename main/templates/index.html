@@ -1,0 +1,200 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Banner Part Start -->
+ <section id="banner">
+  <div class="container banner-bg2">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="banner-details text-center">
+          <h1>We Welcome Latest Research Articles</h1>
+          <a href="/submit">Submit Your Article</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Banner Part End -->
+
+<!-- Publish Part Start -->
+<section id="publish">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="publish-title text-center">
+          <h6>Why publish with us?</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="publish-content text-center">
+          <i class="fas fa-clock"></i>
+          <h6>Timely Publication</h6>
+          <p>We provide our authors with a swift and care-free publishing process.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="publish-content text-center">
+          <i class="fas fa-book"></i>
+          <h6>Thorough Evaluation</h6>
+          <p>Our highly qualified Editors and Reviewers provide thoughtful insights to researchers on their manuscripts.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="publish-content text-center mr10">
+          <i class="fas fa-lock-open"></i>
+          <h6>Open Access</h6>
+          <p>All our articles are available online for unlimited access and is also archived.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Publish Part End -->
+
+<!-- About Part Start -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="articles">
+          <h6>Recent Articles</h6>
+          <nav style="margin-top: 40px;">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href=" #nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Most Recent</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href=" #nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Most Cited</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href=" #nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Most Viewed</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href=" #nav-contacts" role="tab" aria-controls="nav-contact" aria-selected="false">Most Downloaded</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            
+            <!-- Most Recent Part Start -->
+
+              {% for post in allPost  %}
+                <div class="article-content">
+                  <div class="research-article mb-3">
+                    <span>Research Article</span>
+                    <span style="color: #8c7ae6;">Open Access</span>
+                  </div>
+                  <a href="/articles/{{post.slug}}"><h5>{{post.title}}</h5></a>
+                  <p><i class="fas fa-user"></i>{{post.author}}</p>
+                  <span><strong style="color: #e58e26;">Published:</strong> {{post.timeStamp}}</span>
+                  <div class="view">
+                    <a href="/articles/{{post.slug}}"><i class="fas fa-eye"></i>Abstract</a>
+                    <!-- <a href="#"><i class="fas fa-file-pdf"></i>Pdf</a> -->
+                  </div>
+                </div>
+              {% endfor %}
+
+
+              <div class="more-btn text-right">
+                <a href="/articles">More...</a>
+              </div>
+            </div>
+          
+            <!-- Most Recent Part End -->
+
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <h5 class="mr3">The following is a list of the most cited articles based on citations published in the last two years, according to CrossRef.</h5>
+              
+            <!-- Most Cited Start -->
+
+              {% for post in allPost  %}
+                <div class="article-content">
+                  <div class="research-article mb-3">
+                    <span>Research Article</span>
+                    <span style="color: #8c7ae6;">Open Access</span>
+                  </div>
+                  <a href="/articles/{{post.slug}}"><h5>{{post.title}}</h5></a>
+                  <p><i class="fas fa-user"></i>{{post.author}}</p>
+                  <span><strong style="color: #e58e26;">Published:</strong> {{post.timeStamp}}</span>
+                  <div class="view">
+                    <a href="/articles/{{post.slug}}"><i class="fas fa-eye"></i>Abstract</a>
+                    <!-- <a href="#"><i class="fas fa-file-pdf"></i>Pdf</a> -->
+                  </div>
+                </div>
+              {% endfor %}
+
+              <!-- Most Cited end -->
+
+              <div class="more-btn text-right">
+                <a href="/articles">More...</a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            
+                <!-- Most Viewed Start -->
+
+                <!-- Most Viewed end -->
+
+
+              <div class="more-btn text-right">
+                <a href="/articles">More...</a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="nav-contact-tab">
+              
+              <!-- Most Downloaded Start -->
+
+              <!-- Most Downloaded end -->
+
+              <div class="more-btn text-right">
+                <a href="/articles">More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="other-journal">
+          <h6>Our Other Journals</h6>
+          <div class="row">
+            <div class="col-lg-6 col-6 col-md-4">
+              <div class="mr2">
+                <a href="#">
+                  <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-6 col-md-4">
+              <div class="mr2">
+                <a href="#">
+                  <img src="{% static 'images/journal_2.jpg' %}" alt="image" class="w-100">
+                </a>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6 col-6 col-md-4">
+              <div class="mr2">
+                <a href="#">
+                  <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-6 col-md-4">
+              <div class="mr2">
+                <a href="#">
+                  <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-6 col-md-4">
+              <div class="mr2">
+                <a href="#">
+                  <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                </a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="ad text-center">
+          <h6 style="margin-bottom: 0;">Ads Here</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Part End -->
+{% endblock %}

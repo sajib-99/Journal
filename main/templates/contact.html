@@ -1,0 +1,84 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+ <!-- Contact Us Part Start -->
+ <section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="contact-bg">
+            <h6>Get in touch with us!</h6>
+            <p style="margin-bottom: 0;text-align: justify;">Sheba Publications welcomes you for your valuable suggestions, ideas, support and feedback. Please use the form below to contact us at any time. We will respond to your message within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+  <!-- Contact Details Part Start -->
+  <section id="contact-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="mr9">
+            <div class="contact-us" style="margin-bottom: 30px;">
+              <h6>Contact Us</h6>
+            </div>
+            <div class="form">
+              <form method="post" action="/contact" >
+                {% csrf_token %}
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Full Name: <sup style="color: #28a745;">*</sup></label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Full Name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="exampleFormControlInput1">Email Address: <sup style="color: #28a745;">*</sup></label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="exampleFormControlNumber1">Phone No: <sup style="color: #28a745;">*</sup></label>
+                    <input type="phone" name="phone" class="form-control" id="phone" placeholder="Enter Your Phone No" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">Topic: <sup style="color: #28a745;">*</sup></label>
+                    <input type="text" name="tropic" class="form-control" id="tropic" placeholder="Enter Your Topic" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message: <sup style="color: #28a745;">*</sup></label>
+                  <textarea class="form-control" name="content" id="content" rows="3" placeholder="Enter Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px;">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="address">
+            <h6>Journal Contact</h6>
+            <div class="add-details">
+              <p style="margin-top: 20px;color: #e58e26;font-weight: 700;">Principal Contact:</p>
+              <p><!-- <p>Dr. Anjuman Shelly<br> -->
+                WJBB Editor-In-Chief
+                </p>
+              <a href="#"><p><i class="fas fa-envelope"></i>editor@w-jbb.com</p></a>
+              <p style="margin-top: 20px;color: #e58e26;font-weight: 700;">Support Contact:</p>
+              <a href="#"><p><i class="fas fa-envelope"></i>info@w-jbb.com</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+
+{% endblock %}

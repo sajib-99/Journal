@@ -1,0 +1,43 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+ <!-- Contact Us Part Start -->
+ <section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-bg">
+            <h6>Our Vision</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+
+  <!-- Mission Part Start -->
+  <section id="mission">
+    <div class="container">
+      <div class="row">
+        <div class="mission-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <h6>Our vision</h6>
+              <p>We aim to facilitate the global exchange and review of research, ideas and expertise among individuals in the scientific community.</p>
+              <p>Our vision is simple: to partner with researchers and scientific institutes, to enable a realization of the full potential of their content in the digital environment, and to increase the efficiency of research in our world.</p>
+            </div>
+            <div class="col-lg-6">
+              <img src="{% static 'images/vision.jpg' %}" alt="image" class="w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission Part End -->
+
+{% endblock %}

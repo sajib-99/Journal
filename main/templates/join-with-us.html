@@ -1,0 +1,108 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Join Us Part Start -->
+<section id="join">
+    <div class="container cmn-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="join-bg text-center">
+            <h6>Join as the Editorial Board Member or Reviewer</h6>
+            <p style="margin-bottom: 0;text-align: justify;">World journal of Biotechnology and Bioengineering invites you to join the WJBB editorial board as one of its distinguished members or you may join as a reviewer. If you  like to join please complete the below form and also send us your resume via e-mail: <a href="#" style="color: #28a745;font-weight: 600;font-style: italic;">info@w-jbb.com.</a> The Educational qualification of a PhD degree is required to be an editorial board member or a reviewer. Once selected, your information will be displayed in the <span style="color: #28a745;font-weight: 600;font-style: italic;">WJBB</span> website. These honorary positions are voluntary.</p>
+            <br>
+            <p style="margin-bottom: 0;text-align: justify;">Before submitting your profile as the Editorial Board Member or Reviewer you must have to have an account. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Join Us Part End -->
+  {% if user.is_authenticated %}
+  <!-- Join Details Part Start -->
+  <section id="join-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="join-content">
+            <h6>Join As Editor</h6>
+            <form method="post" enctype="multipart/form-data" action="/editor_join_us">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputText1">First Name <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="e_first_name" name="e_first_name" aria-describedby="textHelp" placeholder="Enter First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText2">Last Name <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="e_last_name" name="e_last_name" aria-describedby="textHelp" placeholder="Enter Last Name" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText3">Affiliation <sup style="color: #28a745;"> </sup></label>
+                <input type="text" class="form-control" id="e_affiliation" name="e_affiliation" aria-describedby="textHelp" placeholder="Affiliation Name" >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email <sup style="color: #28a745;">*</sup></label>
+                <input type="email" class="form-control" id="e_email" name="e_email" aria-describedby="emailHelp" placeholder="Enter Your Email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText4">Address <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="e_addresss" name="e_address" aria-describedby="textHelp" placeholder="Enter Your Address" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText5">Phone No <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="e_phone" name="e_phone" aria-describedby="textHelp" placeholder="Enter Your Phone No" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Upload CV <sup style="color: #28a745;">*</sup></label>
+                <input type="file" class="form-control-file" id="e_cv" name="e_cv" required>
+              </div>
+              <button type="submit" name="Editor_Request" class="btn btn-primary w-100">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="join-content">
+            <h6>Join As Reviewer</h6>
+            <form method="post" enctype="multipart/form-data" action="review_join_us">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputText1">First Name <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="r_first_name" name="r_first_name" aria-describedby="textHelp" placeholder="Enter First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText2">Last Name <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="r_last_name" name="r_last_name" aria-describedby="textHelp" placeholder="Enter Last Name" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText3">Affiliation <sup style="color: #28a745;"> </sup></label>
+                <input type="text" class="form-control" id="r_affiliation" name="r_affiliation" aria-describedby="textHelp" placeholder="Affiliation Name" >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email <sup style="color: #28a745;">*</sup></label>
+                <input type="email" class="form-control" id="r_email" name="r_email" aria-describedby="emailHelp" placeholder="Enter Your Email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText4">Address <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="r_addresss" name="r_address" aria-describedby="textHelp" placeholder="Enter Your Address" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText5">Phone No <sup style="color: #28a745;">*</sup></label>
+                <input type="text" class="form-control" id="r_phone" name="r_phone" aria-describedby="textHelp" placeholder="Enter Your Phone No" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Upload CV <sup style="color: #28a745;">*</sup></label>
+                <input type="file" class="form-control-file" id="r_cv" name="r_cv" required>
+              </div>
+              <button type="submit" id="Reviewer_Request" class="btn btn-primary w-100">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Join Details Part End -->
+  {% endif %}
+
+{% endblock %}

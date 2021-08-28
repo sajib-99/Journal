@@ -1,0 +1,125 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+  .archive-details h5{
+    background-image: linear-gradient(-120deg, #fdfbfb 0%, #ebedee 100%);
+    font-size: 20px;
+    font-weight: 600;
+    color: #218c74;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+  }
+  .archive-details p{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    color: #113a5d;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+    font-weight: 600;
+  }
+  .archive-details span{
+    color: #454545;
+    font-weight: 500;
+  }
+  .archive-details .btn{
+    background-color: #218c74;
+    border-color: #218c74;
+    padding: 8px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .other-journal p a{
+    color: #454545;
+    font-weight: 500;
+    transition: all linear .3s;
+  }
+  .other-journal p a:hover{
+    color: #218c74;
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Article Details Part Start -->
+<section id="archive">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="archive-details">
+          <h5>Manuscript Information</h5>
+          <div class="row">
+            <div class="col-lg-3">
+              <p>Paper ID  </p>
+            </div>
+            <div class="col-lg-1">
+              <span>:</span>
+            </div>
+            <div class="col-lg-8 pl-0">
+              <span>{{post.paper_id}}</span>
+            </div>
+            <div class="col-lg-3">
+              <p>Manuscript Category  </p>
+            </div>
+            <div class="col-lg-1">
+              <span>:</span>
+            </div>
+            <div class="col-lg-8 pl-0">
+              <span>{{post.Paper_Type}}</span>
+            </div>
+            <div class="col-lg-3">
+              <p>Author  </p>
+            </div>
+            <div class="col-lg-1">
+              <span>:</span>
+            </div>
+            <div class="col-lg-8 pl-0">
+              <span>{{post.author}}</span>
+            </div>
+          </div>
+          <br>
+          <h5>Title</h5>
+          <p>{{post.Article_Title}} </p>
+          <br>
+          <h5>Article</h5>
+          <p> {{post.Abstract | safe }}</p>
+          <br>
+          <h5>Pdf</h5>
+          <p><a href="{{ post.paper.url }}"><i class="fas fa-file-pdf" style="color: #218c74; margin-right: 8px;"></i>Download Full Pdf</a></p>
+          <br>
+          <h5>Submit Review</h5>
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+        <div class="col-lg-3">
+          <div class="other-journal">
+            <h6>Important Resources</h6>
+            <div class="row">
+              
+              <div style="padding-top: 20px;">
+                <a class="dropdown-item" href="/resources_policy" target="_blank">Policies</a>
+                <a class="dropdown-item" href="/resources_editors" target="_blank">Editors Guidelines</a>
+                <a class="dropdown-item" href="/resources_authors" target="_blank">Authors Guidelines</a>
+                <a class="dropdown-item" href="/resources_reviews" target="_blank">Reviewers Guidelines</a>
+              </div>
+
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Article Details Part End -->
+
+{% endblock %}

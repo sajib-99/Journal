@@ -1,0 +1,102 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Contact Us Part Start -->
+<section id="contact">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-bg">
+            <h6>View Profile</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+  
+  <!-- View Profile Part Start -->
+  <section id="view-profile">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 m-auto">
+          <div class="profile-content">
+            <h5>Personal Information :</h5>
+            <div class="row">
+              <!-- <div class="col-lg-6">
+                <p style="margin-bottom: 0;"><Span>Title: </Span>Prof.</p>
+              </div> -->
+              
+                <div class="col">
+                  <table>
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>User Name </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;"> {{user}} </p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Full Name </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.FirstName}} {{user.userprofile.LastName}}</p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>User Email </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.Email}}</p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Phone No </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.PhoneNo}}</p> </td>
+                    </tr>
+
+                  </table>
+                </div>
+
+                <div class="col">
+                  <table>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Department </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.Department}}</p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Designation </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.Designation}}</p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Institution </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.Institution}}</p> </td>
+                    </tr>
+
+                    <tr>
+                      <td> <p style="margin-bottom: 0;"><Span>Country </Span></p> </td>
+                      <td> <p style="margin-bottom: 0;"><Span>: </Span></p>  </td>
+                      <td> <p style="margin-bottom: 0;">{{user.userprofile.Country}}</p> </td>
+                    </tr>
+
+                  </table>
+                </div>
+                
+            </div>
+            <!-- <h5>Register As :</h5>
+            <p style="margin-bottom: 0;"><Span>Register as an: </Span>Author</p>
+            <button type="button" class="btn btn-primary" style="margin-top: 15px;" data-toggle="modal" data-target="#staticBackdrop">Edit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section id="more">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="more-details">
+
+          {% for post in items  %}
+
+            <h6>Article</h6>
+            <span class="open-access">Open Access</span>
+            <div class="article-content">
+              <a href="{{post.slug}}"><h5>{{post.title}}</h5></a>
+              <p><i class="fas fa-user"></i>{{post.author}}</p>
+              <span><strong style="color: #e58e26;">Published: </strong> {{post.timeStamp}}</span>
+              <div class="view">
+                <a href="{{post.slug}}"><i class="fas fa-eye"></i>Abstract</a>
+                <!-- <a href="#"><i class="fas fa-file-pdf"></i>Pdf</a> -->
+              </div>
+            </div>
+            
+          {% endfor %}    
+
+            
+            <nav aria-label="..." style="margin-top: 30px;">
+              <ul class="pagination" style="justify-content: center;">
+                <li class="page-item">
+                  {% if items.has_previous %}
+                  <a class="page-link" href="?page={{ items.previous_page_number }}" tabindex="-1" aria-disabled="true">Previous</a>
+                  {% endif %}
+                </li>
+                
+                <!-- <li class="page-item active"><a class="page-link" href="#">1</a></li> -->
+                
+                <li class="page-item">
+                  {% if items.has_next %}
+                  <a class="page-link" href="?page={{ items.next_page_number }}">Next</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="other-journal">
+            <h6>Our Other Journals</h6>
+            <div class="row">
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" alt="image" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 col-md-4">
+                <div class="mr2">
+                  <a href="#">
+                    <img src="{% static 'images/journal.jpg' %}" class="w-100">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ad text-center">
+            <h6 style="margin-bottom: 0;">Ads Here</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- More Part End -->
+
+
+{% endblock %}

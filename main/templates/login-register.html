@@ -1,0 +1,120 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <!-- Contact Us Part Start -->
+ <section id="contact" class="mr8">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-bg text-center">
+            <h6>Login</h6>
+            <p>If you already have an account, please enter e-mail address and password then login.</p>
+            <i class="fas fa-arrow-down" style="color: #487eb0;font-size: 35px;"></i>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-bg text-center">
+            <h6>Register</h6>
+            <p>To create an account in the World Journal of Biotechnology and Bioengineering (WJBB), please register by following the below form.</p>
+            <i class="fas fa-arrow-down" style="color: #487eb0;font-size: 35px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Part End -->
+
+
+  <!-- Login -->
+  <section id="login-register">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="login-register-bg">
+            <div class="mr6 text-center">
+              <h6 style="margin-bottom: 0;">Login</h6>
+              <p>If you already have an account, please enter e-mail address and password then login.</p>
+            </div>
+            <div class="login">
+              <form action="/login" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="inputEmail">Username : <sup style="color: #28a745;">*</sup></label>
+                    <input type="" class="form-control" id="loginusernmae" name="loginusernmae" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Password : <sup style="color: #28a745;">*</sup></label>
+                    <input type="password" class="form-control" id="loginpass" name="loginpass" placeholder="">
+                </div>
+                <!-- <div class="form-group">
+                    <p style="color: #28a745;font-weight: 600;"><i>
+                      Forget password? to retrieve click here</i><a href="../pages/login-help.html"><i class="fas fa-sign-in-alt" style="margin-left: 15px; font-size: 20px;color: #6c5ce7;"></i></a></p>
+                </div> -->
+                <div class="form-group" style="margin-top: 40px;">
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+  <!-- Register Part Start -->
+
+        <div class="col-lg-6">
+          <div class="login-register-bg">
+            <div class="mr6 text-center">
+              <h6 style="margin-bottom: 0;">Register</h6>
+              <p>To create an account in the World Journal of Biotechnology and Bioengineering (WJBB), please register by following the below form.</p>
+            </div>
+            <h5>User Credentials :</h5>
+                <form action="/login_register" method="post" >
+                  {% csrf_token %}
+
+                  {{ form|crispy }}
+
+                  <h5>Personal Information :</h5>
+
+                  {{ profile_form|crispy }}
+
+                  
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        I agree to the use of my personal data as described in our privacy policy.
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        I would like to receive updates on content published by Sheba Publications.
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="register-btn text-center">
+                    <button class="btn btn-primary w-100" type="submit">Register</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Login / Register Part End -->
+
+{% endblock %}

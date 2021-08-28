@@ -1,0 +1,337 @@
+/* ====================================================================================================
+                                        Extra Small Device
+====================================================================================================== */
+@media(max-width: 575.98px){
+  .logo h2{
+    text-align: center;
+  }
+  .sub-nav-btn{
+    text-align: center;
+  }
+  .sub-navbar-title p{
+    font-size: 6.4vw;
+  }
+  .mr7{
+    font-size: 7.3vw!important;
+  }
+  .sub-navbar-title span{
+    font-size: 5.1vw!important;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #fff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  .form-inline{
+    justify-content: center;
+  }
+  #banner{
+    height: 400px;
+  }
+  .publish-content{
+    margin-bottom: 30px;
+    height: auto;
+  }
+  #about{
+    padding-top: 0;
+  }
+  .articles{
+    margin-bottom: 30px;
+  }
+  .get{
+    margin-bottom: 30px;
+  }
+  #footer-contact{
+    padding-bottom: 10px;
+  }
+  .contact-bg{
+    text-align: center;
+  }
+  .about-content{
+    margin-top: 30px;
+  }
+  .article-details{
+    margin-bottom: 30px;
+  }
+  .nav-pills{
+    margin-bottom: 20px;
+  }
+  .mr9{
+    margin-bottom: 30px;
+  }
+  #join-details{
+    padding-bottom: 10px;
+  }
+  .join-content{
+    margin-bottom: 30px;
+  }
+  #login-register{
+    padding-bottom: 10px;
+  }
+  .mr8{
+    display: none;
+  }
+  .mr6{
+    display: block;
+  }
+  .login-register-bg{
+    margin-bottom: 30px;
+  }
+  .more-details{
+    margin-bottom: 30px;
+  }
+  .more-details h6{
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .open-access{
+    margin-left: 0;
+  }
+  .payment-details{
+    margin-bottom: 30px;
+  }
+  .privacy-policy h5{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .ad{
+    margin-bottom: 30px;
+  }
+}
+/* =======================================================================================================
+                                                  Small Device
+========================================================================================================= */
+@media(min-width:576px) and (max-width:767.98px){
+  .logo h2{
+    text-align: center;
+  }
+  .sub-nav-btn{
+    text-align: center;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #fff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  .form-inline{
+    justify-content: center;
+  }
+  #banner{
+    height: 400px;
+  }
+  .publish-content{
+    margin-bottom: 30px;
+  }
+  .mr8{
+    margin-top: 30px;
+  }
+  .articles{
+    margin-bottom: 30px;
+  }
+  .get{
+    margin-bottom: 30px;
+  }
+  .get p{
+    margin-right: 0;
+  }
+  #footer-contact{
+    padding-bottom: 10px;
+  }
+  .contact-bg{
+    text-align: center;
+  }
+  .article-details{
+    margin-bottom: 30px;
+  }
+  .nav-pills{
+    margin-bottom: 20px;
+  }
+  .mr9{
+    margin-bottom: 30px;
+  }
+  #join-details{
+    padding-bottom: 10px;
+  }
+  .join-content{
+    margin-bottom: 30px;
+  }
+  #login-register{
+    padding-bottom: 10px;
+  }
+  .mr8{
+    display: none;
+  }
+  .mr6{
+    display: block;
+  }
+  .login-register-bg{
+    margin-bottom: 30px;
+  }
+  .more-details{
+    margin-bottom: 30px;
+  }
+  .more-details h6{
+    margin-right: 20px;
+  }
+  .open-access{
+    margin-left: 0;
+  }
+  .payment-details{
+    margin-bottom: 30px;
+  }
+  .privacy-policy h5{
+    line-height: 28px;
+  }
+  .mr10{
+    margin-top: 30px;
+  }
+  .ad{
+    margin-bottom: 30px;
+  }
+}
+
+/* =======================================================================================================
+                                                Medium Device 
+==========================================================================================================*/
+@media(min-width:768px) and (max-width:991.98px){
+  .logo h2{
+    text-align: center;
+  }
+  .sub-nav-btn{
+    text-align: center;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #fff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  .form-inline{
+    justify-content: center;
+  }
+  #banner{
+    height: 400px;
+  }
+  .publish-content{
+    margin-bottom: 30px;
+  }
+  .mr8{
+    margin-top: 30px;
+  }
+  .articles{
+    margin-bottom: 30px;
+  }
+  .get{
+    margin-bottom: 30px;
+  }
+  .get p{
+    margin-right: 0;
+  }
+  #footer-contact{
+    padding-bottom: 10px;
+  }
+  .contact-bg{
+    text-align: center;
+  }
+  .article-details{
+    margin-bottom: 30px;
+  }
+  .nav-pills{
+    margin-bottom: 20px;
+  }
+  .mr9{
+    margin-bottom: 30px;
+  }
+  #join-details{
+    padding-bottom: 10px;
+  }
+  .join-content{
+    margin-bottom: 30px;
+  }
+  #login-register{
+    padding-bottom: 10px;
+  }
+  .mr8{
+    display: none;
+  }
+  .mr6{
+    display: block;
+  }
+  .login-register-bg{
+    margin-bottom: 30px;
+  }
+  .more-details{
+    margin-bottom: 30px;
+  }
+  .more-details h6{
+    margin-right: 20px;
+  }
+  .open-access{
+    margin-left: 0;
+  }
+  .payment-details{
+    margin-bottom: 30px;
+  }
+  .privacy-policy h5{
+    line-height: 28px;
+  }
+  .mr10{
+    margin-top: 30px;
+  }
+  .ad{
+    margin-bottom: 30px;
+  }
+}
+
+/* =================================================================================================
+                                             Large Device
+==================================================================================================== */
+@media(min-width:992px) and (max-width:1199.98px){
+  #banner{
+    height: 433px;
+  }
+  .contact-bg{
+    text-align: center;
+  }
+  .contact-bg ul li{
+    text-align: left;
+  }
+}
